@@ -327,7 +327,7 @@ Class ot {
             HeaderFound:=false
             for Parameter, Value in this.Arguments {
                 if (Value.Tab3Parent=Header) {
-                    if Value.Control!="meta" {
+                    if (Value.Control!="meta") {
                         HeaderFound:=true
                             , HiddenHeaders[Header]:=false
                         break
@@ -350,7 +350,7 @@ Class ot {
             gui %GUI_ID% show
         }
         for Tab, _ in TabHeaders {
-            if HiddenHeaders[Tab] {
+            if (HiddenHeaders[Tab]) {
                 continue
             }
             if (this.StepsizedGuishow) {
@@ -360,7 +360,7 @@ Class ot {
             gui %GUI_ID% Tab, % Tab,, Exact
             GuiControl Choose, vTab3, % Tab
             for Parameter, Value in this.Arguments {
-                if Value.Control="meta" {
+                if (Value.Control="meta") {
                     this[Parameter]:=Value.Value
                     continue
                 }
@@ -523,7 +523,7 @@ Class ot {
         }
         maxTabHeight:=0
         for _, Tab in TabHeaders {
-            if HiddenHeaders[Tab] {
+            if (HiddenHeaders[Tab]) {
                 continue
             }
             if (Tab.Height>maxTabHeight) {

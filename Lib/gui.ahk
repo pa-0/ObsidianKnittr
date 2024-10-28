@@ -202,7 +202,7 @@ guiShow(runCLI:=FALSE,CLIArgs:="") {
                     continue
                 }
                 param_:=strreplace(param,format ".") 
-                if ot.Arguments.HasKey(param_) {
+                if (ot.Arguments.HasKey(param_)) {
                     ot.Arguments[param_].Value:=value
                 }
             }
