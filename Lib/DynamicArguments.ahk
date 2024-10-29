@@ -247,7 +247,7 @@ Class ot {
     }
     AdjustNulls() {
         for _, Value in this.Arguments {
-            if Value.Value="NULL" {
+            if (Value.Value="NULL") {
                 Value.Value:=strreplace(Value.Value,"""")
             }
         }
