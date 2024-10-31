@@ -617,8 +617,6 @@ Class ot {
         for Parameter,_ in this.Arguments {
             ;@ahk-neko-ignore 1 line; at 4/28/2023, 9:49:42 AM ; https://github.com/CoffeeChaton/vscode-autohotkey-NekoHelp/blob/main/note/code107.md
             Parameter:=strreplace(Parameter,"-","___")
-            ;k=v%Parameter% ;; i know this is jank, but I can't seem to fix it. just don't touch for now?
-            ;a:=%k%
             GuiControlGet val,, v%Parameter%
             Parameter:=strreplace(Parameter,"___","-")
                 , this["Arguments",Parameter].Value:=val

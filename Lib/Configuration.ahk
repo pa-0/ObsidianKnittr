@@ -74,20 +74,20 @@ setupDefaultDA(Path) {
             `ttbl-cap-location:DDL|Type:String|Default:margin|String:"Select location of table caption"|ctrlOptions:Top,Bottom,Margin|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/html.html#tables"|Linktext:?
             `tfig-title:combobox|Type:String|Default:Figure|String:"Specify title prefix on figure-captions"|ctrlOptions:Figure,Fig.|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/html.html#figures"|Linktext:?
             `tfig-responsive:Checkbox|Type:boolean|Default:1|String:"Do you want to make images responsive?"|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/html.html#figures"|Linktext:?
-            `temail-obfuscation:DDL|Type:String|Default:none|String:"Specify a method for obfuscating 'mailto'-links in HTML documents"|ctrlOptions:none,javascript,references|Tab3Parent:3. Misc
-            `treference-location:DDL|Type:String|Default:margin|String:"Set reference position"|ctrloptions:bottom,margin|Tab3Parent:3. Misc
-            `tcitation-location:DDL|Type:String|Default:margin|String:"Set citation position"|ctrloptions:bottom,margin|Tab3Parent:3. Misc
+            `temail-obfuscation:DDL|Type:String|Default:none|String:"Specify a method for obfuscating 'mailto'-links in HTML documents"|ctrlOptions:none,javascript,references|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.html#format-options"|Linktext:?
+            `treference-location:DDL|Type:String|Default:margin|String:"Set reference position"|ctrloptions:bottom,margin|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.html#footnotes"|Linktext:?
+            `tcitation-location:DDL|Type:String|Default:margin|String:"Set citation position"|ctrloptions:bottom,margin|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.html#references"|Linktext:?
             `tcitations-hover:Checkbox|Type:boolean|Default:1|String:"Enables a hover popup for citations that shows the reference information"|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/output-formats/html-basics.html#reference-popups"|Linktext:?
             `tfootnotes-hover:Checkbox|Type:boolean|Default:1|String:"Enables a hover popup for footnotes that shows the footnote contents"|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/output-formats/html-basics.html#reference-popups"|Linktext:?
             `tcode-fold:DDL|Type:String|Default:true|String:"Collapse code into HTML <details> tag so the user can display it on-demand"|ctrlOptions:true,false,show|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/output-formats/html-code.html#folding-code"|Linktext:?
-            `tdate:combobox|Type:String|Default:now|String:"Specify dynamic date to use when compiling"|ctrloptions:today,now,last-modified|Tab3Parent:3. Misc
-            `tdate-format:combobox|Type:String|Default:DD.MM.YYYY|String:"Specify date format to use when compiling"|ctrloptions:iso,full,long,medium,short,DD.MM.YYYY|Tab3Parent:3. Misc
-            `tstandalone:Checkbox|Type:boolean|Default:1|String:"Produce output with an appropriate header and footer, aka not a fragment"|ctrloptions:disabled|Tab3Parent:3. Misc
+            `tdate:combobox|Type:String|Default:now|String:"Specify dynamic date to use when compiling"|ctrloptions:today,now,last-modified|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.html#title-author"|Linktext:?
+            `tdate-format:combobox|Type:String|Default:DD.MM.YYYY|String:"Specify date format to use when compiling"|ctrloptions:iso,full,long,medium,short,DD.MM.YYYY|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/dates.html"|Linktext:?
+            `t;standalone:Checkbox|Type:boolean|Default:1|String:"Produce output with an appropriate header and footer, aka not a fragment"|ctrloptions:disabled|Tab3Parent:3. Misc
             `tcode-overflow:DDL|Type:String|Default:Scroll|String:|ctrlOptions:Scroll,Wrap|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/output-formats/html-code.html#code-overflow"|Linktext:?
-            `tembed-resources:Checkbox|Type:boolean|Default:1|String:"Produce a standalone HTML file with no external dependencies using 'data:'-URIs"|ctrloptions:disabled|Tab3Parent:3. Misc
+            `tembed-resources:Checkbox|Type:boolean|Default:1|String:"Produce a standalone HTML file with no external dependencies using 'data:'-URIs"|ctrloptions:disabled|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.html#rendering"|Linktext:?
             `tlink-external-icon:Checkbox|Type:boolean|Default:0|String:"Show a special icon next to links that leave the current site"|Tab3Parent:4. Links|Link:"https://quarto.org/docs/reference/formats/html.html#links"|Linktext:?
             `tlink-external-newwindow:Checkbox|Type:boolean|Default:1|String:"Open external links in a new browser window/tab (don't navigate the current tab)"|Tab3Parent:4. Links|Link:"https://quarto.org/docs/reference/formats/html.html#links"|Linktext:?
-            `tauthor:combobox|Type:String|Default:"Gewerd Strauss"|String:"Set Author for this output format"|ctrlOptions:Author1,Gewerd Strauss,redacted|Tab3Parent:3. Misc
+            `tauthor:combobox|Type:String|Default:"Gewerd Strauss"|String:"Set Author for this output format"|ctrlOptions:Author1,Gewerd Strauss,redacted|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/html.hftml#title-author"|Linktext:?
             `tfilesuffix:Meta|Value:html
             `tinputsuffix:Meta|Value:qmd
             `trenderingpackage_start:Meta|Value:quarto::quarto_render("index.qmd",execute_params = list(
@@ -103,9 +103,8 @@ setupDefaultDA(Path) {
             `ttoc:Checkbox|Type:boolean|Default:0|String:"Do you want to include a ToC?"|Tab3Parent:1. ToC and Numbering|Value:0|Link:"https://quarto.org/docs/reference/formats/docx.html#table-of-contents"|Linktext:?f
             `ttoc-depth:Edit|Type:Integer|Default:3|String:"What is the maximum depth the ToC should display?"|Max:5|Min:1|ctrlOptions:Number|Tab3Parent:1. ToC and Numbering|Value:2|Link:"https://quarto.org/docs/reference/formats/docx.html#table-of-contents"|Linktext:?
             `t;number-offset:Edit|Type:String|Default:0|String:"Offset for section headings in output?"|Tab3Parent:1. ToC and Numbering|Value:0|Link:"https://quarto.org/docs/reference/formats/docx.html#numbering"|Linktext:?
-            `t;toc-location:DDL|Type:String|Default:"right"|String:"Select ToC Location"|ctrlOptions:body,left,right|Tab3Parent:1. ToC and Numbering
             `ttoc-title:Edit|Type:String|String:"Set the ToC's Title"|Default:"Table of Contents"|Tab3Parent:1. ToC and Numbering|Link:"https://quarto.org/docs/reference/formats/docx.html#table-of-contents"|Linktext:?
-            `treference-doc:File|Type:String|Default:"BE28 Template Internship Report - Kopie.docx"|String:"Choose format-reference Word-file."|SearchPath:"D:\Dokumente neu\PaperStyle_WordReferenceFiles\"|Tab3Parent:3. General|Link:"https://quarto.org/docs/reference/formats/docx.html#format-options"|Linktext:?
+            `treference-doc:File|Type:String|Default:"BE28 Template Internship Report - Kopie.docx"|String:"Choose format-reference Word-file."|SearchPath:"D:\Dokumente neu\PaperStyle_WordReferenceFiles\"|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/docx.html#format-options"|Linktext:?
             `tdf-print:DDL|Type:String|Default:"kable"|String:"Choose Method for printing data frames"|ctrlOptions:default,kable,tibble,paged|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/docx.html#tables"|Linktext:?
             `t;TODO: Finish this format, modify DynamicArguments.ahk to accept lists via a parameters "Tab3Parent" relationship: so we can map which kinds of string format we need for each package.
             `tfig-height:Edit|Type:Integer|Default:6|String:"Set default height in inches for figures"|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/docx.html#figures"|Linktext:?
@@ -113,9 +112,9 @@ setupDefaultDA(Path) {
             `t;out-width:Edit|Type:Integer|Default:8|String:"Set default width in inches for figure containers"|Tab3Parent:2. Figures and Tables
             `t;fig-asp:Edit|Type:Number|Default
             `tfig-dpi:Edit|Type:Integer|Default:96|String:"Set figure dpi"|ctrlOptions:Number|Tab3Parent:2. Figures and Tables|Link:"https://quarto.org/docs/reference/formats/docx.html#figures"|Linktext:?
-            `t;date:combobox|Type:String|Default:now|String:"Specify dynamic date to use when compiling"|ctrloptions:today,now,last-modified|Tab3Parent:3. Misc
-            `t;date-format:combobox|Type:String|Default:DD.MM.YYYY|String:"Specify date format to use when compiling"|ctrloptions:iso,full,long,medium,short,DD.MM.YYYY|Tab3Parent:3. Misc
-            `tauthor:combobox|Type:String|Default:"Author1"|String:"Set Author for this output format"|ctrlOptions:Author1,Gewerd Strauss,redacted|Tab3Parent:3. General
+            `tdate:combobox|Type:String|Default:now|String:"Specify dynamic date to use when compiling"|ctrloptions:today,now,last-modified|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/dates.html"|Linktext:?
+            `tdate-format:combobox|Type:String|Default:DD.MM.YYYY|String:"Specify date format to use when compiling"|ctrloptions:iso,full,long,medium,short,DD.MM.YYYY|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/dates.html"|Linktext:?
+            `tauthor:combobox|Type:String|Default:"Author1"|String:"Set Author for this output format"|ctrlOptions:Author1,Gewerd Strauss,redacted|Tab3Parent:3. Misc|Link:"https://quarto.org/docs/reference/formats/docx.html#title-author"|Linktext:?
             `trenderingpackage_start:Meta|Value:quarto::quarto_render("index.qmd",execute_params = list(
             `trenderingpackage_end:Meta|Value:),output_format = "docx","`%name`%.docx")
             `tfilesuffix:Meta|Value:docx
@@ -130,19 +129,21 @@ setupDefaultDA(Path) {
             `t;title:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `t;subtitle:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `t;date:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
-            `t;author:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
+            `tdate:combobox|Type:String|Default:now|String:"Specify dynamic date to use when compiling"|ctrloptions:today,now,last-modified|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/dates.html"|Linktext:?
+            `tdate-format:combobox|Type:String|Default:DD.MM.YYYY|String:"Specify date format to use when compiling"|ctrloptions:iso,full,long,medium,short,DD.MM.YYYY|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/dates.html"|Linktext:?
+            `tauthor:combobox|Type:String|Default:"Author1"|String:"Set Author for this output format"|ctrlOptions:Author1,Gewerd Strauss,redacted|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `t;abstract:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `tthanks:Edit|Type:String|String:"The contents of an acknowledgments footnote after the document title"|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `t;order:Edit|Tab3Parent:Title && Author|Link:"https://quarto.org/docs/reference/formats/pdf.html#title-author"|Linktext:?
             `t; Format Options
-            `tpdf-engine:combobox|Type:String|Default:xelatex|String:"Use specified pdf engine. Give full path if engine not on PATH. Do not use 'pdflatex' if you have unicode-characters"|ctrlOptions:xelatex,pdflatex,lualatex,tectonic,latexmk,context,wkhtmltopdf,prince,weasyprint,pdfroff|Tab3Parent:Format options|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|LinkText:?
-            `tpdf-engine-opt:edit|Type:String|Default:"[]"|String:"Give command-line argument to the pdf-engine"|Tab3Parent:Format options|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|LinkText:?
+            `tpdf-engine:combobox|Type:String|Default:xelatex|String:"Use specified pdf engine. Give full path if engine not on PATH. Do not use 'pdflatex' if you have unicode-characters"|ctrlOptions:xelatex,pdflatex,lualatex,tectonic,latexmk,context,wkhtmltopdf,prince,weasyprint,pdfroff|Tab3Parent:Format options|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|Linktext:?
+            `tpdf-engine-opt:edit|Type:String|Default:"[]"|String:"Give command-line argument to the pdf-engine"|Tab3Parent:Format options|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|Linktext:?
             `t; Table of contents
-            `ttoc:checkbox|Type:boolean|Default:1|String:"Include an automatically generated ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|LinkText:?
-            `ttoc-depth:edit|Type:integer|Default:3|String:"Specify the number of section levels to include in the ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|LinkText:?
-            `ttoc-title:edit|Type:String|Default:"Table of Contents"|String:"The title used for the ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|LinkText:?
-            `tlof:checkbox|Type:boolean|Default:1|String:"Print a list of figures in the document"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|LinkText:?
-            `tlot:checkbox|Type:boolean|Default:1|String:"Print a list of tables in the document"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|LinkText:?
+            `ttoc:checkbox|Type:boolean|Default:1|String:"Include an automatically generated ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|Linktext:?
+            `ttoc-depth:edit|Type:integer|Default:3|String:"Specify the number of section levels to include in the ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|Linktext:?
+            `ttoc-title:edit|Type:String|Default:"Table of Contents"|String:"The title used for the ToC"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|Linktext:?
+            `tlof:checkbox|Type:boolean|Default:1|String:"Print a list of figures in the document"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|Linktext:?
+            `tlot:checkbox|Type:boolean|Default:1|String:"Print a list of tables in the document"|Tab3Parent:Table of Contents|Link:"https://quarto.org/docs/reference/formats/pdf.html#table-of-contents"|Linktext:?
             `t; Numbering
             `tnumber-depth:Edit|Type:Integer|Default:3|String:"What is the maximum depth of sections that should be numbered?"|Max:99|Min:1|ctrlOptions:Number|Tab3Parent:Numbering|Link:"https://quarto.org/docs/reference/formats/pdf.html#numbering"|Linktext:?
             `tnumber-sections:Checkbox|Type:boolean|Default:1|String:"Do you want to number your sections automatically?"|Tab3Parent:Numbering|Link:"https://quarto.org/docs/reference/formats/pdf.html#numbering"|Linktext:?
@@ -222,19 +223,19 @@ setupDefaultDA(Path) {
             `ttbl-cap-location:DDL|Type:String|Default:bottom|String:"Where to place table captions"|ctrlOptions:top,bottom,margin|Tab3Parent:Tables|Link:"https://quarto.org/docs/reference/formats/pdf.html#tables"|Linktext:?
             `tdf-print:DDL|Type:String|Default:default|String:"Method used to print tables in Knitr engine documents"|ctrlOptions:default,kable,tibble,paged|Tab3Parent:Tables|Link:"https://quarto.org/docs/reference/formats/pdf.html#tables"|Linktext:?
             `t; References
-            `t; bibliography|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; csl|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; cite-method|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; citeproc:Checkbox|Type:boolean|Default:1|String:"Turn on built-in citation processing."|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; biblatexoptions:edit|Type:String|String:"A list of options for BibLaTeX"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; natbiboptions:edit|Type:String|String:"One or more options to provide for natbib when generating a bibliography"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; biblio-style:edit|Type:String|String:"The bibliography style to use (e.g. `\bibliographystyle{dinat}` when using natbib or biblatex"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; biblio-title|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; biblio-config|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; citation-abbreviations|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; link-citations|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; link-bibliography|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
-            `t; notes-after-punctuation|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:"?"
+            `t; bibliography|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; csl|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; cite-method|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; citeproc:Checkbox|Type:boolean|Default:1|String:"Turn on built-in citation processing."|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; biblatexoptions:edit|Type:String|String:"A list of options for BibLaTeX"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; natbiboptions:edit|Type:String|String:"One or more options to provide for natbib when generating a bibliography"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; biblio-style:edit|Type:String|String:"The bibliography style to use (e.g. `\bibliographystyle{dinat}` when using natbib or biblatex"|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; biblio-title|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; biblio-config|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; citation-abbreviations|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; link-citations|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; link-bibliography|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
+            `t; notes-after-punctuation|Tab3Parent:References|Link:"https://quarto.org/docs/reference/formats/pdf.html#references"|Linktext:?
             `t; Footnotes
             `t; links-as-notes|Tab3Parent:Footnotes|Link:"https://quarto.org/docs/reference/formats/pdf.html#footnotes"|Linktext:?
             `t; reference-location|Tab3Parent:Footnotes|Link:"https://quarto.org/docs/reference/formats/pdf.html#footnotes"|Linktext:?
@@ -294,7 +295,7 @@ setupDefaultDA(Path) {
             `tinputsuffix:Meta|Value:qmd
             `tdateformat:Meta|Value:{A_DD}.{A_MM}.{A_YYYY}
             `tpackage:Meta|Value:quarto
-            `t;|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|Tab3Parent:Format options|LinkText:?
+            `t;|Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|Tab3Parent:Format options|Linktext:?
             `t;Link:"https://quarto.org/docs/reference/formats/pdf.html#format-options"|Linktext:?
         )
     str4=
