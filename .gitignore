@@ -13,3 +13,4 @@ ObsidianKnittr**.exe
 /.obsidian/
 docs.md
 /docs/
+*.py

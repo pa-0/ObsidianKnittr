@@ -470,7 +470,7 @@ openFolder(Path) {
         WinActivate
         return
     }
-    if script.config.config.OpenParentfolderInstead {
+    if (script.config.config.OpenParentfolderInstead) {
         run % OutDir2
     } else {
         run % OutDir
@@ -479,7 +479,7 @@ openFolder(Path) {
 }
 buildAHKScriptContent(Path,RSCRIPT_PATH:="") {
     SplitPath % Path,, OutDir
-    if script.config.config.bundleStarterScript && (RSCRIPT_PATH!="") {
+    if (script.config.config.bundleStarterScript && (RSCRIPT_PATH!="")) {
         BUILD_RPATH:=strreplace(OutDir "\build.R","\","\\")
             , OUTDIR_PATH:=OutDir
         AHK_Build=
